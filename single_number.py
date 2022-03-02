@@ -1,5 +1,5 @@
 class Solution:
-    def singleNumber(self, nums: [int]) -> int:
+    def singleNumber( nums: [int]) -> int:
         if len(nums) == 1:
             return nums[0]
         nums.sort()
