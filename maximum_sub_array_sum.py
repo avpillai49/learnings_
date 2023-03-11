@@ -1,4 +1,4 @@
-lista = [2,2,2,4,1,5,6]
+lista = [-2,-3,4,-1,-2, 1,5,-3]
 
 def maxiumum_sub_array_sum(lista):
    currentsum = 0
@@ -32,4 +32,35 @@ print(max_sub_array(lista)
 )
 
 
-    
+def maxSubArraySum(lista):
+    n = len(lista)
+    currentSum = 0
+    maxSum = 0
+    for i in range(n):
+        currentSum += lista[i]
+        if currentSum < 0:
+            currentSum = 0
+        elif currentSum >= 0:
+            maxSum = max(maxSum, currentSum)
+    return maxSum
+
+def maxSubArraySumFinal(lista):
+    import sys
+    maxSum = -sys.maxsize -1
+    currentSum = 0
+
+    for i in lista:
+        currentSum += i
+        if currentSum < i:
+            currentSum = i
+        if maxSum <= currentSum:
+            maxSum = currentSum
+    return maxSum
+
+print(maxSubArraySumFinal(lista=lista))
+
+print(maxiumum_sub_array_sum(lista=lista)
+)
+print(max_sub_array(lista)
+)
+print(maxSubArraySum(lista))
