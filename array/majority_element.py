@@ -5,5 +5,6 @@ class Solution:
             hash_Dict[num] = hash_Dict.get(num, 0) + 1
             if hash_Dict[num] > len(nums) //2:
                 return num
+            
 
 
