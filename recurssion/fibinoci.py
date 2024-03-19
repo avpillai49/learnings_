@@ -1,16 +1,20 @@
-def fibinoci(n):
-   if n in [1,2]:
-    return 1
-   return fibinoci(n - 1) + fibinoci(n - 2)
-  
-def fibi(n):
-   n1 = 0
-   n2 = 1
-
-   if 
+from timeit import repeat
+import sys
+from functools import lru_cache
+   
+mem = {}
+@lru_cache
+def fib(n):
     
-
-
-if __name__ == "__main__":
-    for i in range(3):
-      print(fibinoci(i))
+    print(mem)
+    if n <= 1:
+        return n
+    if n in mem:
+        return mem[n]
+    mem[n] = fib(n - 1) + fib(n - 2)
+    return mem[n]
+        
+   
+    
+    
+print(fib(4))
