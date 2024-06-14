@@ -41,10 +41,6 @@ class Solution:
             right += 1
         
         return res
-
-
-    
-
             
 print(Solution().maxSlidingWindowdeque(nums=nums, k = 3))
 print(Solution().maxSlidingWindow(nums=nums, k = 3))
